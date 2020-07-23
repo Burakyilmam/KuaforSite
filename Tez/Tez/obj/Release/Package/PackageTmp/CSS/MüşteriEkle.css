@@ -1,0 +1,30 @@
+﻿.ekle {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ekle i {
+    position: absolute;
+    padding-top: 17px;
+    padding-left: 20px;
+    color: black;
+}
+input , select {
+    width: 350px;
+    border-radius: 25px;
+    height: 50px;
+    border-color: transparent;
+    background-color: rgba(128, 128, 128, 0.12);
+    padding: 10px;
+    text-align: center;
+}
+.btn-info {
+    width: 350px;
+    height: 50px;
+    border-radius: 25px;
+    padding-top: 10px;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    opacity: 1;
+    color: black;
+}

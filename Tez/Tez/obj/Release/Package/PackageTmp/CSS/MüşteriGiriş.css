@@ -1,0 +1,61 @@
+﻿.Content {
+    background-image: url('../bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 900px;
+}
+
+.müşteriform {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input {
+    width: 350px;
+    border-radius: 25px;
+    height: 50px;
+    border-color: transparent;
+    background-color: rgba(128, 128, 128, 0.12);
+}
+
+.btn-info {
+    width: 350px;
+    height: 50px;
+    border-radius: 25px;
+    padding-top: 10px;
+}
+
+.müşteriform a {
+    padding-right: 30px;
+    padding-left: 20px;
+}
+
+    .müşteriform a :hover {
+        color: lawngreen;
+        opacity:0.5;
+    }
+
+.müşteriform i {
+    position: absolute;
+    padding-top: 17px;
+    padding-left: 20px;
+    color: white;
+}
+
+.input-field {
+    padding: 10px;
+    text-align: center;
+}
+
+b {
+    color: white;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    opacity: 1;
+    color: #fff;
+}
+
+.müşteriform h2 {
+    color: white;
+}

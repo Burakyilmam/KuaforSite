@@ -1,0 +1,116 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Ana Sayfa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/CSS/Header.css" rel="stylesheet" />
+    <link href="~/CSS/Main.css" rel="stylesheet" />
+    <link href="~/CSS/Footer.css" rel="stylesheet" />
+    <link href="~/CSS/MüşteriEkle.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="Ana">
+
+        <div class="Header" id="HeaderID">
+            <a href="AnaSayfa.html"><i class="fa fa-home"></i></a>
+            <a href="ErkekHizmetler.html" class="active"><i class="fa fa-male"></i><i class="fa fa-female"></i>	Müşteriler</a>
+            <a href="Yorumlar.html"><i class="fa fa-comment"></i>	Yorumlar</a>
+            <a href="Hakkimizda.html"><i class="fa fa-info-circle"></i>	Randevular</a>
+
+            <a id="Sag" href="GirişYap.html"><i class="fa fa-sign-in"></i>	Çıkış</a>
+            <a id="Sag" href="Kayitol.html"><i class="fa fa-user"></i>	Profilim</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div class="Content">
+            <div class="ekle">
+                <br /><br /><br /><br />
+                <h2>Yeni Müşteri Formu</h2><br /><br />
+                <form class="form-group" method="post">
+                    <i class="fa fa-user "></i><input type="text" placeholder="Adınızı Giriniz" name="Müşteri_AD" /><br /><br />
+                    <i class="fa fa-user "></i><input type="text" placeholder="Soyadınızı Giriniz" name="Müşteri_SOYAD" /><br /><br />
+                    <i class="fa fa-user-secret "></i> <input type="text" placeholder="Kullanıcı Adınızı Giriniz" name="Müşteri_KULLANICI" /><br /><br />
+                    <i class="fa fa-lock "></i><input type="text" placeholder="Şifrenizi Giriniz" name="Müşteri_ŞİFRE" /><br /><br />
+                    <i class="fa fa-lock "></i><input type="text" placeholder="Telefon Numarası Giriniz" name="Müşteri_TEL" /><br /><br />
+                    <i class="fa fa-lock "></i><input type="text" placeholder="E-posta Adresi Giriniz" name="Müşteri_EPOSTA" /><br /><br /><br />
+                    <div>
+                        <button class="btn btn-info">Müşteri Ekle</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="Footer">
+            <div class="ÜstFooter">
+                <div class="Bağlantı">
+                    <h5>Site Bağlantıları</h5>
+                    <li><a style="text-decoration:none;" href="/AnaSayfa/AnaSayfa">Ana Sayfa</astyle="text-decoration:none"></li>
+                    <ul>
+                        <li><a style="text-decoration:none" href="/İletişim/İletişim">İletişim</a></li>
+                        <li><a style="text-decoration:none" href="/Randevu/RandevuEkle">Randevu</a></li>
+                        <li><a style="text-decoration:none" href="/KayitSayfa/Kayit">Kayıt Ol</a></li>
+                        <li><a style="text-decoration:none" href="/GirişSayfa/MüşteriGiriş">Giriş Yap</a></li>
+                    </ul>
+                    <ul>
+                        <li><a style="text-decoration:none" href="/Hizmetler/Hizmetler">Hizmetler</a></li>
+                        <li><a style="text-decoration:none" href="/Galeri/Galeri">Galeri</astyle="text-decoration:none"></li>
+                        <li><a style="text-decoration:none" href="/Yorumlar/Yorumlar">Yorumlar</a></li>
+                        <li><a style="text-decoration:none" href="/Hakkımızda/Hakkımızda">Hakkımızda</a></li>
+                    </ul>
+                </div>
+                <div class="Yasal">
+                    <h5>Yasal Bilgilendirme</h5>
+                    <ul>
+                        <li><a href="#">Gizlilik ve Güvenlik</a></li>
+                        <li><a href="#">Kişisel Verilerin Korunması</a></li>
+                        <li><a href="#">Kullanım Şartları</a></li>
+                    </ul>
+                </div>
+                <div class="İletisim">
+                    <h5>İletişim Bilgileri</h5>
+                    <ul>
+                        <li><b><i class="fa fa-map-marker"></i> Adres</b></li>
+                        <li>Alipaşa Mahallesi Atatürk Bulvarı<br /> Merkez / Kütahya</li>
+                        <li><b><i class="fa fa-phone"></i> Telefon</b></li>
+                        <li>(274) 12 23</li>
+                        <li><b><i class="fa fa-envelope"></i> E-Posta</b></li>
+                        <li>info@dumlupınar.com</li>
+                        <li><b>Sosyal Medya</b></li>
+                        <li id="sosyal">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="AltFooter">
+                <h6>Copyright 2020 - Dumlupınar Kuaför Tüm Hakları Saklıdır.</h6>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("HeaderID");
+            if (x.className === "Header") {
+                x.className += " responsive";
+            } else {
+                x.className = "Header";
+            }
+        }
+    </script>
+</body>
+</html>

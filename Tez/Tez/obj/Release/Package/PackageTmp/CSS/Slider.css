@@ -1,0 +1,219 @@
+﻿.aw-slider {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.resim1, .resim2, .resim3, .resim4, .resim5 {
+    position: absolute;
+    width: 100%;
+    height: 400px;
+}
+
+.resim1 {
+    left: 0;
+}
+
+.resim2 {
+    left: 100%;
+}
+
+.resim3 {
+    left: 200%;
+}
+
+.resim4 {
+    left: 300%;
+}
+
+.resim5 {
+    left: 400%;
+}
+
+.aw-slider > div {
+    width: 100%;
+    height: 400px;
+    left: 0px;
+    position: absolute;
+    -webkit-animation-duration: 20s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: gecisler;
+    -moz-animation-duration: 20s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-name: gecisler;
+    -ms-animation-duration: 20s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-name: gecisler;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-name: gecisler;
+}
+
+@-webkit-keyframes gecisler {
+    0% {
+        left: 0px;
+    }
+
+    10% {
+        left: 0px;
+    }
+
+    20% {
+        left: -800px;
+    }
+
+    30% {
+        left: -800px;
+    }
+
+    40% {
+        left: -1600px;
+    }
+
+    50% {
+        left: -1600px;
+    }
+
+    60% {
+        left: -2400px;
+    }
+
+    70% {
+        left: -2400px;
+    }
+
+    80% {
+        left: -3200px;
+    }
+
+    90% {
+        left: -3200px;
+    }
+}
+
+@-moz-keyframes gecisler {
+    0% {
+        left: 0px;
+    }
+
+    10% {
+        left: 0px;
+    }
+
+    20% {
+        left: -800px;
+    }
+
+    30% {
+        left: -800px;
+    }
+
+    40% {
+        left: -1600px;
+    }
+
+    50% {
+        left: -1600px;
+    }
+
+    60% {
+        left: -2400px;
+    }
+
+    70% {
+        left: -2400px;
+    }
+
+    80% {
+        left: -3200px;
+    }
+
+    90% {
+        left: -3200px;
+    }
+}
+
+@-ms-keyframes gecisler {
+    0% {
+        left: 0px;
+    }
+
+    10% {
+        left: 0px;
+    }
+
+    20% {
+        left: -100%;
+    }
+
+    30% {
+        left: -100%;
+    }
+
+    40% {
+        left: -200%;
+    }
+
+    50% {
+        left: -200%;
+    }
+
+    60% {
+        left: -300%;
+    }
+
+    70% {
+        left: -300%;
+    }
+
+    80% {
+        left: -400%;
+    }
+
+    90% {
+        left: -400%;
+    }
+}
+
+@keyframes gecisler {
+    0% {
+        left: 0px;
+    }
+
+    10% {
+        left: 0px;
+    }
+
+    20% {
+        left: -100%;
+    }
+
+    30% {
+        left: -100%;
+    }
+
+    40% {
+        left: -200%;
+    }
+
+    50% {
+        left: -200%;
+    }
+
+    60% {
+        left: -300%;
+    }
+
+    70% {
+        left: -300%;
+    }
+
+    80% {
+        left: -400%;
+    }
+
+    90% {
+        left: -400%;
+    }
+}

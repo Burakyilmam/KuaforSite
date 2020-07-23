@@ -1,0 +1,19 @@
+﻿.Hizmet {
+    height: 300px;
+    color: white;
+    background-image: url(https://www.parislicemil.com/images/covers/hizmetlerimiz-165ab7a04d7e0ec.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 300px;
+    text-align: center;
+}
+
+    .Hizmet h3 {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .Hizmet .btn-light {
+        width: 250px;
+        height: 40px;
+        border-radius: 15px;
+    }

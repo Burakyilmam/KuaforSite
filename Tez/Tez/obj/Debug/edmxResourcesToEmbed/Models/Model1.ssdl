@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TezModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Müşteri">
+    <Key>
+      <PropertyRef Name="Müşteri_ID" />
+    </Key>
+    <Property Name="Müşteri_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Müşteri_AD" Type="varchar" MaxLength="50" />
+    <Property Name="Müşteri_SOYAD" Type="varchar" MaxLength="100" />
+    <Property Name="Müşteri_KULLANICI" Type="varchar" MaxLength="100" />
+    <Property Name="Müşteri_ŞİFRE" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Randevu">
+    <Key>
+      <PropertyRef Name="Randevu_ID" />
+    </Key>
+    <Property Name="Randevu_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Randevu_AD" Type="varchar" MaxLength="50" />
+    <Property Name="Randevu_SOYAD" Type="varchar" MaxLength="100" />
+    <Property Name="Randevu_TEL" Type="varchar" MaxLength="50" />
+    <Property Name="Randevu_EPOSTA" Type="varchar" MaxLength="100" />
+    <Property Name="Randevu_TÜR" Type="varchar" MaxLength="50" />
+    <Property Name="Randevu_TARİH" Type="date" />
+    <Property Name="Randevu_SAAT" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Yönetici">
+    <Key>
+      <PropertyRef Name="Yönetici_ID" />
+    </Key>
+    <Property Name="Yönetici_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Yönetici_KULLANICI" Type="varchar" MaxLength="100" />
+    <Property Name="Yönetici_ŞİFRE" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="TezModelStoreContainer">
+    <EntitySet Name="Müşteri" EntityType="Self.Müşteri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Randevu" EntityType="Self.Randevu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Yönetici" EntityType="Self.Yönetici" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

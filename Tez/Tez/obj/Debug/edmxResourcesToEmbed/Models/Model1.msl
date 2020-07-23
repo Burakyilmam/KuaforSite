@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TezModelStoreContainer" CdmEntityContainer="TezEntities2">
+    <EntitySetMapping Name="Müşteri">
+      <EntityTypeMapping TypeName="TezModel.Müşteri">
+        <MappingFragment StoreEntitySet="Müşteri">
+          <ScalarProperty Name="Müşteri_ID" ColumnName="Müşteri_ID" />
+          <ScalarProperty Name="Müşteri_AD" ColumnName="Müşteri_AD" />
+          <ScalarProperty Name="Müşteri_SOYAD" ColumnName="Müşteri_SOYAD" />
+          <ScalarProperty Name="Müşteri_KULLANICI" ColumnName="Müşteri_KULLANICI" />
+          <ScalarProperty Name="Müşteri_ŞİFRE" ColumnName="Müşteri_ŞİFRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Randevu">
+      <EntityTypeMapping TypeName="TezModel.Randevu">
+        <MappingFragment StoreEntitySet="Randevu">
+          <ScalarProperty Name="Randevu_ID" ColumnName="Randevu_ID" />
+          <ScalarProperty Name="Randevu_AD" ColumnName="Randevu_AD" />
+          <ScalarProperty Name="Randevu_SOYAD" ColumnName="Randevu_SOYAD" />
+          <ScalarProperty Name="Randevu_TEL" ColumnName="Randevu_TEL" />
+          <ScalarProperty Name="Randevu_EPOSTA" ColumnName="Randevu_EPOSTA" />
+          <ScalarProperty Name="Randevu_TÜR" ColumnName="Randevu_TÜR" />
+          <ScalarProperty Name="Randevu_TARİH" ColumnName="Randevu_TARİH" />
+          <ScalarProperty Name="Randevu_SAAT" ColumnName="Randevu_SAAT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Yönetici">
+      <EntityTypeMapping TypeName="TezModel.Yönetici">
+        <MappingFragment StoreEntitySet="Yönetici">
+          <ScalarProperty Name="Yönetici_ID" ColumnName="Yönetici_ID" />
+          <ScalarProperty Name="Yönetici_KULLANICI" ColumnName="Yönetici_KULLANICI" />
+          <ScalarProperty Name="Yönetici_ŞİFRE" ColumnName="Yönetici_ŞİFRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

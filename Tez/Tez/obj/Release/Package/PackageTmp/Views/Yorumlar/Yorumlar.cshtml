@@ -1,0 +1,199 @@
+﻿@using Tez.Models
+@model List<Yorum>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Ana Sayfa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css'>
+    <link href="~/CSS/Header.css" rel="stylesheet" />
+    <link href="~/CSS/Duyuru.css" rel="stylesheet" />
+    <link href="~/CSS/Hizmet.css" rel="stylesheet" />
+    <link href="~/CSS/Main.css" rel="stylesheet" />
+    <link href="~/CSS/Footer.css" rel="stylesheet" />
+    <link href="~/CSS/DENEME1.css" rel="stylesheet" />
+   
+    <style>
+        .Content {
+            margin-left: auto;
+            margin-right: auto;
+            width: 95%;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 1.95rem;
+            font-family: inherit;
+            font-weight: 500;
+            line-height: 1.2;
+            color: inherit;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        th ul {
+            list-style-type: none;
+        }
+
+        th li {
+            display: inline-block;
+        }
+
+        input[type="checkbox"][id^="myCheckbox"] {
+            display: none;
+        }
+
+        label {
+            border: 1px solid #fff;
+            display: block;
+            position: relative;
+            cursor: pointer;
+        }
+
+        textarea {
+            width: 100%;
+            resize: none;
+            border: none;
+        }
+
+        #divler div {
+            float: left;
+        }
+
+        #divler {
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        #yorumkutu {
+            background-color: #f4f4f4;
+        }
+
+        #Boş {
+            background-color: white;
+            height: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="Ana">
+        <div class="Logo">
+            <h2 style="text-align:center">DUMLUPINAR KUAFÖR SALONU</h2>
+        </div>
+        <div class="Header" id="HeaderID">
+            <a href="/AnaSayfa/AnaSayfa"><i class="fa fa-home"></i></a>
+            <a href="/Hizmetler/Hizmetler"><i class="fa fa-male"></i><i class="fa fa-female"></i>	Hizmetler</a>
+            <a href="/Galeri/Galeri"><i class="fa fa-image"></i>	Galeri</a>
+            <a href="/Yorumlar/Yorumlar" class="active"><i class="fa fa-comment"></i>	Yorumlar</a>
+            <a href="/Hakkımızda/Hakkimizda"><i class="fa fa-info-circle"></i>	Hakkımızda</a>
+            <a href="/İletişim/İletişim"><i class="fa fa-envelope"></i>	İletişim</a>
+            <a href="/Randevu/RandevuEkle"><i class="fa fa-bell"></i>	Randevu</a>
+            <a href="/GirişSayfa/OrtakGiriş" id="Sag"><i class="fa fa-sign-in"></i>	Giriş Yap</a>
+            <a id="Sag" href="/KayitSayfa/Kayit"><i class="fa fa-user"></i>	Kayıt Ol</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div class="Content">
+            <br />
+            <h2 style="text-align:center">Yorumlarımız</h2>
+            <div class="YorumKutu">
+                <table><br />
+                    <tbody>     
+                            @foreach (var yrm in Model)
+                            {         
+                        <tr id="yorumkutu">
+                            <th>
+                                <ul id="divler">
+                                    <div><img width="64px" style="border-radius:10px;" src="https://secure.gravatar.com/avatar/4a9f7d27f412df498d7241dcac671ab7?s=60&d=mm&r=g" alt="" /></div>
+                                    <div><li style="font-size:20px;margin-left:10px;font-weight: bold;">@yrm.Yorum_AD @yrm.Yorum_SOYAD</li></div>
+                                    <div style="float:right;margin-right:10px;"><li><i style="margin-right:10px;" class="fa fa-calendar"></i>@yrm.Yorum_TARİH</li></div><br /><br /><br />
+                                    <text style="margin-left:10px;">@yrm.Yorum_YORUM</text><div style="float:right;margin-right:10px;">@yrm.Hizmet_Türü</div>
+                            </ul><div id="Boş"></div>
+                            </th>
+                        </tr>
+                            }
+                        </tbody>
+                </table>
+            </div><br /><br />
+                        <div style="text-align:center" class="YorumEkle">
+                            <a href="/Yorumlar/YorumEkle/" class="btn btn-success">Yorum Ekle</a>
+                        </div>
+        </div>
+
+        <div class="Footer">
+            <div class="ÜstFooter">
+                <div class="Bağlantı">
+                    <h5>Site Bağlantıları</h5>
+                    <li><a style="text-decoration:none;" href="/AnaSayfa/AnaSayfa">Ana Sayfa</a></li>
+                    <ul>
+                        <li><a style="text-decoration:none" href="/İletişim/İletişim">İletişim</a></li>
+                        <li><a style="text-decoration:none" href="/Randevu/RandevuEkle">Randevu</a></li>
+                        <li><a style="text-decoration:none" href="/KayitSayfa/Kayit">Kayıt Ol</a></li>
+                        <li><a style="text-decoration:none" href="/GirişSayfa/MüşteriGiriş">Giriş Yap</a></li>
+                    </ul>
+                    <ul>
+                        <li><a style="text-decoration:none" href="/Hizmetler/Hizmetler">Hizmetler</a></li>
+                        <li><a style="text-decoration:none" href="/Galeri/Galeri">Galeri</a></li>
+                        <li><a style="text-decoration:none" href="/Yorumlar/Yorumlar">Yorumlar</a></li>
+                        <li><a style="text-decoration:none" href="/Hakkımızda/Hakkımızda">Hakkımızda</a></li>
+                    </ul>
+                </div>
+                <div class="Yasal">
+                    <h5>Yasal Bilgilendirme</h5>
+                    <ul>
+                        <li><a href="#">Gizlilik ve Güvenlik</a></li>
+                        <li><a href="#">Kişisel Verilerin Korunması</a></li>
+                        <li><a href="#">Kullanım Şartları</a></li>
+                    </ul>
+                </div>
+                <div class="İletisim">
+                    <h5>İletişim Bilgileri</h5>
+                    <ul>
+                        <li><b><i class="fa fa-map-marker"></i> Adres</b></li>
+                        <li>Alipaşa Mahallesi Atatürk Bulvarı<br /> Merkez / Kütahya</li>
+                        <li><b><i class="fa fa-phone"></i> Telefon</b></li>
+                        <li>(274) 12 23</li>
+                        <li><b><i class="fa fa-envelope"></i> E-Posta</b></li>
+                        <li>info@dumlupınar.com</li>
+                        <li><b>Sosyal Medya</b></li>
+                        <li id="sosyal">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="AltFooter">
+                <h6>Copyright 2020 - Dumlupınar Kuaför Tüm Hakları Saklıdır.</h6>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("HeaderID");
+            if (x.className === "Header") {
+                x.className += " responsive";
+            } else {
+                x.className = "Header";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+﻿.Header {
+    width:100%;
+    overflow: hidden;
+    background-color: #f4f4f4;
+}
+
+    .Header a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+#Sag {
+    float: right;
+}
+
+.Header a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.Header a:hover {
+    background-color: #ddd;
+}
+
+.Header .icon {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .Header a:not(:first-child) {
+        display: none;
+    }
+
+    .Header a.icon {
+        float: right;
+        display: block;
+    }
+
+    #Sag {
+        float: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .Header.responsive {
+        position: relative;
+    }
+
+        .Header.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .Header.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+}

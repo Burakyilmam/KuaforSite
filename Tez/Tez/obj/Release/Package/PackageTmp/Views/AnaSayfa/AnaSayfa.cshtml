@@ -1,0 +1,142 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Ana Sayfa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/CSS/Header.css" rel="stylesheet" />
+    <link href="~/CSS/Slider.css" rel="stylesheet" />
+    <link href="~/CSS/Duyuru.css" rel="stylesheet" />
+    <link href="~/CSS/Hizmet.css" rel="stylesheet" />
+    <link href="~/CSS/Main.css" rel="stylesheet" />
+    <link href="~/CSS/Footer.css" rel="stylesheet" />
+    <link href="~/CSS/DENEME1.css" rel="stylesheet" />
+</head>
+<body> 
+    <div class="Ana">
+        <div class="Logo">
+          <h2 style="text-align:center;cursor:default">DUMLUPINAR KUAFÖR SALONU</h2>
+        </div>
+        <div class="Header" id="HeaderID">
+            <a href="/AnaSayfa/AnaSayfa" class="active"><i class="fa fa-home"></i></a>
+            <a href="/Hizmetler/Hizmetler"><i class="fa fa-male"></i><i class="fa fa-female"></i>	Hizmetler</a>
+            <a href="/Galeri/Galeri"><i class="fa fa-image"></i>	Galeri</a>
+            <a href="/Yorumlar/Yorumlar"><i class="fa fa-comment"></i>	Yorumlar</a>
+            <a href="/Hakkımızda/Hakkimizda"><i class="fa fa-info-circle"></i>	Hakkımızda</a>
+            <a href="/İletişim/İletişim"><i class="fa fa-envelope"></i>	İletişim</a>
+            <a href="/Randevu/RandevuEkle"><i class="fa fa-bell"></i>	Randevu</a>
+            <a href="/GirişSayfa/OrtakGiriş" id="Sag" href="GirişYap.html"><i class="fa fa-sign-in"></i>	Giriş Yap</a>
+            <a id="Sag" href="/KayitSayfa/Kayit"><i class="fa fa-user"></i>	Kayıt Ol</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div class="Content">
+            <div class="aw-slider">
+                <div>
+                    <a class="resim1"><img src="https://www.parislicemil.com/images/slides/4-1-45a40da1ea3b12.jpg" width="100%" height="400px"></a>
+                    <a class="resim2"><img src="https://www.parislicemil.com/images/slides/14-1-145a40d9676a083.jpg" width="100%" height="400px"></a>
+                    <a class="resim3"><img src="https://www.parislicemil.com/images/slides/9-1-95a40d81591649.jpg" width="100%" height="400px"></a>
+                    <a class="resim4"><img src="https://www.parislicemil.com/images/slides/16-1-165a40db8c24b75.jpg" width="100%" height="400px"></a>
+                    <a class="resim5"><img src="https://www.parislicemil.com/images/slides/3-1-35a40da77b9f87.jpg" width="100%" height="400px"></a>
+                </div>
+            </div>
+            <div class="Duyuru">
+                <div class="Saat"><br />
+                    <img src="https://image.flaticon.com/icons/svg/1124/1124602.svg" width="35px" height="35px" />
+                    <h6>Çalışma Saatleri</h6>
+                    <ul>
+                        <li><h6>Pazartesi - Cuma <br /> 09:00 - 21:00</h6></li>
+                        <li><h6>Cumartesi - Pazar <br /> 09:00 - 12:00</h6></li>
+                    </ul>
+                </div>
+                <div class="Rezervasyon"><br />
+                    <img src="https://image.flaticon.com/icons/svg/833/833593.svg" width="35px" height="35px" />
+                    <h6>Rezervasyon</h6><br />
+                    <a class="btn btn-warning" href="/Randevu/RandevuEkle">Randevu Al</a>
+                    <h7>
+                </div>
+                <div class="Adres"><br />
+                    <img width="35px" height="35px" src="https://image.flaticon.com/icons/svg/1483/1483285.svg">
+                    <h6>Adres</h6>
+                    <h6>Alipaşa Mahallesi Atatürk Bulvarı Merkez/Kütahya</h6>
+                </div>
+            </div>
+            <div class="Hizmet">
+                <h3>Hizmetlerimiz ve Fiyatları</h3>
+                <a class="btn btn-light" href="/Hizmetler/Hizmetler">Hizmetlerimiz</a>
+            </div>
+        </div>
+
+        <div class="Footer">
+            <div class="ÜstFooter">
+                <div class="Bağlantı">
+                    <h5>Site Bağlantıları</h5>
+                    <li><a style="text-decoration:none;" href="/AnaSayfa/AnaSayfa">Ana Sayfa</astyle="text-decoration:none"></li>
+                    <ul>
+                        <li><a style="text-decoration:none" href="/İletişim/İletişim">İletişim</a></li>
+                        <li><a style="text-decoration:none" href="/Randevu/RandevuEkle">Randevu</a></li>
+                        <li><a style="text-decoration:none" href="/KayitSayfa/Kayit">Kayıt Ol</a></li>
+                        <li><a style="text-decoration:none" href="/GirişSayfa/MüşteriGiriş">Giriş Yap</a></li>
+                    </ul>
+                    <ul>
+                        <li><a style="text-decoration:none" href="/Hizmetler/Hizmetler">Hizmetler</a></li>
+                        <li><a style="text-decoration:none" href="/Galeri/Galeri">Galeri</astyle="text-decoration:none"></li>
+                        <li><a style="text-decoration:none" href="/Yorumlar/Yorumlar">Yorumlar</a></li>
+                        <li><a style="text-decoration:none" href="/Hakkımızda/Hakkımızda">Hakkımızda</a></li>
+                    </ul>
+                </div>
+                <div class="Yasal">
+                    <h5>Yasal Bilgilendirme</h5>
+                    <ul>
+                        <li><a href="#">Gizlilik ve Güvenlik</a></li>
+                        <li><a href="#">Kişisel Verilerin Korunması</a></li>
+                        <li><a href="#">Kullanım Şartları</a></li>
+                    </ul>   
+                </div>
+                <div class="İletisim">
+                    <h5>İletişim Bilgileri</h5>
+                    <ul>
+                        <li><b><i class="fa fa-map-marker"></i> Adres</b></li>
+                        <li>Alipaşa Mahallesi Atatürk Bulvarı<br /> Merkez / Kütahya</li>
+                        <li><b><i class="fa fa-phone"></i> Telefon</b></li>
+                        <li>(274) 12 23</li>
+                        <li><b><i class="fa fa-envelope"></i> E-Posta</b></li>
+                        <li>info@dumlupınar.com</li>
+                        <li><b>Sosyal Medya</b></li>
+                        <li id="sosyal">
+                            <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+                            <a href="http://www.twitter.com"><i class="fa fa-twitter"></i></a>
+                            <a href="http://www.instagram.com"><i class="fa fa-instagram"></i></a>
+                            <a href="http://www.pinterest.com"><i class="fa fa-pinterest"></i></a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="AltFooter">
+                <h6>Copyright 2020 - Dumlupınar Kuaför Salonu Tüm Hakları Saklıdır.</h6>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("HeaderID");
+            if (x.className === "Header") {
+                x.className += " responsive";
+            } else {
+                x.className = "Header";
+            }
+        }
+    </script>
+</body>
+</html>

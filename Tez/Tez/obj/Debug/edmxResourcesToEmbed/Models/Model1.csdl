@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TezModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Müşteri">
+    <Key>
+      <PropertyRef Name="Müşteri_ID" />
+    </Key>
+    <Property Name="Müşteri_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Müşteri_AD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Müşteri_SOYAD" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Müşteri_KULLANICI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Müşteri_ŞİFRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Randevu">
+    <Key>
+      <PropertyRef Name="Randevu_ID" />
+    </Key>
+    <Property Name="Randevu_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Randevu_AD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Randevu_SOYAD" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Randevu_TEL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Randevu_EPOSTA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Randevu_TÜR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Randevu_TARİH" Type="DateTime" Precision="0" />
+    <Property Name="Randevu_SAAT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Yönetici">
+    <Key>
+      <PropertyRef Name="Yönetici_ID" />
+    </Key>
+    <Property Name="Yönetici_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Yönetici_KULLANICI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Yönetici_ŞİFRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="TezEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Müşteri" EntityType="Self.Müşteri" />
+    <EntitySet Name="Randevu" EntityType="Self.Randevu" />
+    <EntitySet Name="Yönetici" EntityType="Self.Yönetici" />
+  </EntityContainer>
+</Schema>

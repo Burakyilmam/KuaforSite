@@ -1,0 +1,223 @@
+﻿@using Tez.Models
+@model List<Yorum>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Ana Sayfa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css'>
+    <link href="~/CSS/Header.css" rel="stylesheet" />
+    <link href="~/CSS/Duyuru.css" rel="stylesheet" />
+    <link href="~/CSS/Hizmet.css" rel="stylesheet" />
+    <link href="~/CSS/Main.css" rel="stylesheet" />
+    <link href="~/CSS/Footer.css" rel="stylesheet" />
+    <link href="~/CSS/DENEME1.css" rel="stylesheet" />
+    <link href="~/CSS/MüşteriEkle.css" rel="stylesheet" />
+    <style>
+        h2 {
+            margin-top: 0;
+            font-size: 1.95rem;
+            font-family: inherit;
+            font-weight: 500;
+            line-height: 1.2;
+            color: inherit;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        th ul {
+            list-style-type: none;
+        }
+
+        th li {
+            display: inline-block;
+        }
+
+        input[type="checkbox"][id^="myCheckbox"] {
+            display: none;
+        }
+
+        label {
+            border: 1px solid #fff;
+            display: block;
+            position: relative;
+            cursor: pointer;
+        }
+
+        textarea {
+            width: 100%;
+            resize: none;
+            border: none;
+        }
+
+        #yorumkutu {
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+            border-left: 1px solid black;
+        }
+
+        #yorumkutu2 {
+            border-right: 1px solid black;
+            border-left: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+        #yorumyap {
+            width: 350px;
+            height: 350px;
+            resize: none;
+            border-radius: 25px;
+            border-color: transparent;
+            background-color: rgba(128, 128, 128, 0.12);
+            padding: 10px;
+            text-align: center;
+            outline: none;
+            opacity: 1;
+            color: darkred;
+        }
+        select {
+            width: 350px;
+            border-radius: 25px;
+            height: 50px;
+            border-color: transparent;
+            background-color: rgba(128, 128, 128, 0.12);
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="Ana">
+        <div class="Logo">
+            <h2 style="text-align:center">DUMLUPINAR KUAFÖR SALONU</h2>
+        </div>
+        <div class="Header" id="HeaderID">
+            <a href="/AnaSayfa/AnaSayfa" class="active"><i class="fa fa-home"></i></a>
+            <a href="/Hizmetler/Hizmetler"><i class="fa fa-male"></i><i class="fa fa-female"></i>	Hizmetler</a>
+            <a href="/Galeri/Galeri"><i class="fa fa-image"></i>	Galeri</a>
+            <a href="#"><i class="fa fa-comment"></i>	Yorumlar</a>
+            <a href="#"><i class="fa fa-info-circle"></i>	Hakkımızda</a>
+            <a href="/İletişim/İletişim"><i class="fa fa-envelope"></i>	İletişim</a>
+            <a href="/Randevu/RandevuEkle"><i class="fa fa-bell"></i>	Randevu</a>
+            <a href="/GirişSayfa/MüşteriGiriş" id="Sag"><i class="fa fa-sign-in"></i>	Giriş Yap</a>
+            <a id="Sag" href="/KayitSayfa/Kayit"><i class="fa fa-user"></i>	Kayıt Ol</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div class="Content">
+            <div class="ekle">
+                <br />
+                <h2>Yeni Müşteri Formu</h2><br />
+                <form class="form-group" method="post">
+                    <input type="text" placeholder="Adınızı Giriniz" name="Yorum_AD" /><br /><br />
+                    <input type="text" placeholder="Soyadınızı Giriniz" name="Yorum_SOYAD" /><br /><br />
+                    <input style="display:none" type="date" id="listingDateOpen" name="Yorum_TARİH" />
+                    <select id="tür" name="Hizmet_Türü">
+                    <option>Hizmet Seçiniz.</option>
+                    <option>Erkek Hizmetleri</option>
+                    <option>Kadın Hizmetleri</option>
+                    <option>Güzellik Hizmetleri.</option>
+                </select required><br /><br />
+                    <textarea placeholder="Mesajınızı Giriniz." maxlength="150" name="Yorum_YORUM" id="yorumyap"></textarea><br />
+                    <div>
+                        <button class="btn btn-info">Yorum Ekle</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="Footer">
+                <div class="ÜstFooter">
+                    <div class="Bağlantı">
+                        <h5>Site Bağlantıları</h5>
+                        <li><a style="text-decoration:none;" href="/AnaSayfa/AnaSayfa">Ana Sayfa</astyle="text-decoration:none"></li>
+                        <ul>
+                            <li><a style="text-decoration:none" href="/İletişim/İletişim">İletişim</a></li>
+                            <li><a style="text-decoration:none" href="/Randevu/RandevuEkle">Randevu</a></li>
+                            <li><a style="text-decoration:none" href="/KayitSayfa/Kayit">Kayıt Ol</a></li>
+                            <li><a style="text-decoration:none" href="/GirişSayfa/MüşteriGiriş">Giriş Yap</a></li>
+                        </ul>
+                        <ul>
+                            <li><a style="text-decoration:none" href="/Hizmetler/Hizmetler">Hizmetler</a></li>
+                            <li><a style="text-decoration:none" href="/Galeri/Galeri">Galeri</astyle="text-decoration:none"></li>
+                            <li><a style="text-decoration:none" href="/Yorumlar/Yorumlar">Yorumlar</a></li>
+                            <li><a style="text-decoration:none" href="/Hakkımızda/Hakkımızda">Hakkımızda</a></li>
+                        </ul>
+                    </div>
+                    <div class="Yasal">
+                        <h5>Yasal Bilgilendirme</h5>
+                        <ul>
+                            <li><a href="#">Gizlilik ve Güvenlik</a></li>
+                            <li><a href="#">Kişisel Verilerin Korunması</a></li>
+                            <li><a href="#">Kullanım Şartları</a></li>
+                        </ul>
+                    </div>
+                    <div class="İletisim">
+                        <h5>İletişim Bilgileri</h5>
+                        <ul>
+                            <li><b><i class="fa fa-map-marker"></i> Adres</b></li>
+                            <li>Alipaşa Mahallesi Atatürk Bulvarı<br /> Merkez / Kütahya</li>
+                            <li><b><i class="fa fa-phone"></i> Telefon</b></li>
+                            <li>(274) 12 23</li>
+                            <li><b><i class="fa fa-envelope"></i> E-Posta</b></li>
+                            <li>info@dumlupınar.com</li>
+                            <li><b>Sosyal Medya</b></li>
+                            <li id="sosyal">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="AltFooter">
+                    <h6>Copyright 2020 - Dumlupınar Kuaför Tüm Hakları Saklıdır.</h6>
+                </div>
+            </div>
+
+        </div>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js'></script>
+        <script src="~/Swiper.js"></script>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("HeaderID");
+                if (x.className === "Header") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "Header";
+                }
+            }
+        </script>
+        <script>
+            var a = document.getElementById("listingDateOpen")
+        </script>
+        <script>
+            let today = new Date(),
+                day = today.getDate(),
+                month = today.getMonth() + 1,
+                year = today.getFullYear();
+            if (day < 10) {
+                day = '0' + day
+            }
+            if (month < 10) {
+                month = '0' + month
+            }
+            today = year + '-' + month + '-' + day;
+
+            document.getElementById("listingDateOpen").setAttribute("min", today);
+            document.getElementById("listingDateOpen").setAttribute("value", today);
+        </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿.Logo {
+    animation: myanimation 20s infinite;
+}
+@keyframes myanimation {
+    0% {
+        color: #FF0000;
+        box-shadow: 0 0 15px #FF0000;
+        text-shadow: 0 0 15px #FF0000;
+        background-color: white;
+    }
+
+    20% {
+        color: #ff6a00;
+        box-shadow: 0 0 15px #ff6a00;
+        text-shadow: 0 0 15px #ff6a00;
+        background-color: black;
+    }
+
+    40% {
+        color: #ffd800;
+        box-shadow: 0 0 4px #ffd800;
+        text-shadow: 0 0 4px #ffd800;
+        background-color: darkblue;
+    }
+
+    60% {
+        background-color: green;
+        color: white;
+        box-shadow: 0 0 4px white;
+        text-shadow: 0 0 4px white;
+    }
+
+    80% {
+        background-color: #ffd800;
+        color: #0f09a4;
+        box-shadow: 0 0 4px #0f09a4;
+        text-shadow: 0 0 4px #0f09a4;
+    }
+
+    100% {
+        background-color:white;   
+        color: #FF0000;
+        box-shadow: 0 0 15px #FF0000;
+        text-shadow: 0 0 15px #FF0000;
+    }
+}

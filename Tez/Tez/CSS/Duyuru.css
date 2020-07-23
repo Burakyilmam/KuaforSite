@@ -1,0 +1,24 @@
+﻿.Duyuru {
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    background-color: #e8e8e8;
+}
+
+    .Duyuru div {
+        float: left;
+    }
+
+.Saat, .Rezervasyon {
+    height: 200px;
+    background-color: transparent;
+    border-right: 2px solid white;
+    width: 33%;
+}
+
+.Adres {
+    height: 200px;
+    background-color: white;
+    background-color: transparent;
+    width: 34%;
+}

@@ -1,0 +1,39 @@
+﻿#Butonlar {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+#Butonlar h3 {
+    padding-bottom: 30px;
+    padding-top: 10px;
+}
+#Hizmetler {
+    height: 850px;
+}
+#Hizmetler h5{
+    color:black;
+}
+#sutun1 div {
+    padding-top: 20px;
+    float: left;
+}
+.satir1 {
+    width: 33.33%;
+    text-align: center;
+}
+#sutun2 div {
+    float: left;
+}
+
+.satir2 {
+    width: 33.33%;
+    text-align: center;
+}
+.çerçeve {
+    margin-left: 1px;
+    margin-right: 1px;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+}

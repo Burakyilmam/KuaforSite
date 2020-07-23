@@ -1,0 +1,173 @@
+﻿@using Tez.Models
+@model List<Randevu>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Ana Sayfa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/CSS/Header.css" rel="stylesheet" />
+    <link href="~/CSS/Main.css" rel="stylesheet" />
+    <link href="~/CSS/Footer.css" rel="stylesheet" />
+    <link href="~/CSS/MüşteriListele.css" rel="stylesheet" />
+    <style>
+        .Arama {
+            border-color: #333;
+            width: 300px;
+            height: 40px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            padding-left: 20px;
+            padding-bottom: 3px;
+            text-align: justify;
+            outline: none;
+        }
+
+        p i {
+            position: absolute;
+            padding-top: 31px;
+            padding-left: 5px;
+            color: #333;
+        }
+
+        input[type=submit] {
+            position: absolute;
+            margin-top: 20px;
+            width: 50px;
+            height: 40px;
+            border-color: #333;
+            border-left: none;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="Ana">
+
+        <div class="Header" id="HeaderID">
+            <a href="/AnaSayfa/AnaSayfa"><i class="fa fa-home"></i></a>
+            <a href="/Müşteriler/MüşteriListele"><i class="fa fa-male"></i><i class="fa fa-female"></i>	Müşteriler</a>
+            <a href="/Yorumlar/YorumListele"><i class="fa fa-comment"></i>	Yorumlar</a>
+            <a href="/Randevu/RandevuListele" class="active"><i class="fa fa-info-circle"></i>	Randevular</a>
+            <a href="/İletişim/İletişimListele"><i class="fa fa-info-circle"></i>	Mesajlar</a>
+
+            <a id="Sag" href="/AnaSayfa/AnaSayfa"><i class="fa fa-sign-in"></i>	Çıkış</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div class="Content">
+            @using (Html.BeginForm("RandevuListele", "Randevu", FormMethod.Get))
+            {
+                <p style="text-align:center;">
+                    <i class="fa fa-search "></i> @Html.TextBox("r", "", new { placeholder = "Aradığınız Müşterinin Adını Giriniz.", @class = "Arama" })
+                    <input type="submit" value="Ara" />
+                </p>
+            }
+            <table>
+                <tr id="musteribaslik">
+                    <th>AD</th>
+                    <th>SOYAD</th>
+                    <th>TELEFON</th>
+                    <th>E-POSTA</th>
+                    <th>HİZMET</th>
+                    <th>TARİH</th>
+                    <th>SAAT</th>
+                    <th>GÜNCELLE</th>
+                    <th>SİL</th>
+                </tr>
+                <tbody id="liste">
+                    @foreach (var rnd in Model)
+                    {
+                        <tr>
+                            <td>@rnd.Randevu_AD</td>
+                            <td>@rnd.Randevu_SOYAD</td>
+                            <td>@rnd.Randevu_TEL</td>
+                            <td>@rnd.Randevu_EPOSTA</td>
+                            <td>@rnd.Randevu_TÜR</td>
+                            <td>@rnd.Randevu_TARİH</td>
+                            <td>@rnd.Randevu_SAAT</td>
+                            <td><a class="btn btn-primary" href="/Randevu/RandevuGetir/@rnd.Randevu_ID">Güncelle</a></td>
+                            <td><a class="btn btn-danger" href="/Randevu/RandevuSil/@rnd.Randevu_ID">Sil</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <br />
+            <div style="text-align:center">
+                <a href="/Randevu/RandevuEkle/" class="btn btn-success">Müşteri Ekle</a>
+            </div>
+        </div>
+
+        <div class="Footer">
+            <div class="ÜstFooter">
+                <div class="Bağlantı">
+                    <h5>Site Bağlantıları</h5>
+                    <li><a href="#">Ana Sayfa</a></li>
+                    <ul>
+                        <li><a href="#">İletişim</a></li>
+                        <li><a href="#">Randevu</a></li>
+                        <li><a href="#">Kayıt Ol</a></li>
+                        <li><a href="#">Giriş Yap</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Hizmetler</a></li>
+                        <li><a href="#">Galeri</a></li>
+                        <li><a href="#">Yorumlar</a></li>
+                        <li><a href="#">Hakkımızda</a></li>
+                    </ul>
+                </div>
+                <div class="Yasal">
+                    <h5>Yasal Bilgilendirme</h5>
+                    <ul>
+                        <li><a href="#">Gizlilik ve Güvenlik</a></li>
+                        <li><a href="#">Kişisel Verilerin Korunması</a></li>
+                        <li><a href="#">Kullanım Şartları</a></li>
+                    </ul>
+                </div>
+                <div class="İletisim">
+                    <h5>İletişim Bilgileri</h5>
+                    <ul>
+                        <li><b><i class="fa fa-map-marker"></i> Adres</b></li>
+                        <li>Alipaşa Mahallesi Atatürk Bulvarı<br /> Merkez / Kütahya</li>
+                        <li><b><i class="fa fa-phone"></i> Telefon</b></li>
+                        <li>(274) 12 23</li>
+                        <li><b><i class="fa fa-envelope"></i> E-Posta</b></li>
+                        <li>info@dumlupınar.com</li>
+                        <li><b>Sosyal Medya</b></li>
+                        <li id="sosyal">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="AltFooter">
+                <h6>Copyright 2020 - Dumlupınar Kuaför Tüm Hakları Saklıdır.</h6>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("HeaderID");
+            if (x.className === "Header") {
+                x.className += " responsive";
+            } else {
+                x.className = "Header";
+            }
+        }
+    </script>
+</body>
+</html>

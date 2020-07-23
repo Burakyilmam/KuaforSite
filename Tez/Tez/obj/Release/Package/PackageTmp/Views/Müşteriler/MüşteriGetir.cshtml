@@ -1,0 +1,124 @@
+﻿@model Tez.Models.Müşteri
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Ana Sayfa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/CSS/Header.css" rel="stylesheet" />
+    <link href="~/CSS/Main.css" rel="stylesheet" />
+    <link href="~/CSS/Footer.css" rel="stylesheet" />
+    <link href="~/CSS/MüşteriGetir.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="Ana">
+
+        <div class="Header" id="HeaderID">
+            <a href="/AnaSayfa/AnaSayfa"><i class="fa fa-home"></i></a>
+            <a href="/Müşteriler/MüşteriListele" class="active"><i class="fa fa-male"></i><i class="fa fa-female"></i>	Müşteriler</a>
+            <a href="/Yorumlar/YorumListele"><i class="fa fa-comment"></i>	Yorumlar</a>
+            <a href="/Randevu/RandevuListele"><i class="fa fa-info-circle"></i>	Randevular</a>
+
+            <a id="Sag" href="/AnaSayfa/AnaSayfa"><i class="fa fa-sign-in"></i>	Çıkış</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div class="Content">
+            @using (Html.BeginForm("MüşteriGüncelle", "Müşteriler", FormMethod.Post))
+            {
+            <div style="text-align:center">
+                <h2>Güncelleme Formu</h2>
+                <br />
+                <h6 style="color:black">ID</h6>
+                @Html.TextBoxFor(m => m.Müşteri_ID, new { @class = "GuncelleForm" })<br /><br />
+                <h6 style="color:black">AD</h6>
+                @Html.TextBoxFor(m => m.Müşteri_AD, new { @class = "GuncelleForm" })<br /><br />
+                <h6 style="color:black">SOYAD</h6>
+                @Html.TextBoxFor(m => m.Müşteri_SOYAD, new { @class = "GuncelleForm" })<br /><br />
+                <h6 style="color:black">KULLANICI AD</h6>
+                @Html.TextBoxFor(m => m.Müşteri_KULLANICI, new { @class = "GuncelleForm" })<br /><br />
+                <h6 style="color:black">ŞİFRE</h6>
+                @Html.TextBoxFor(m => m.Müşteri_ŞİFRE, new { @class = "GuncelleForm" })<br /><br />
+                <h6 style="color:black">TELEFON</h6>
+                @Html.TextBoxFor(m => m.Müşteri_TEL, new { @class = "GuncelleForm" })<br /><br />
+                <h6 style="color:black">E-POSTA</h6>
+                @Html.TextBoxFor(m => m.Müşteri_EPOSTA, new { @class = "GuncelleForm" })<br /><br />
+            </div>
+                <div style="text-align:center">
+                    <button class="btn btn-success">Güncelle</button>
+                </div>
+            }
+        </div>
+
+        <div class="Footer">
+            <div class="ÜstFooter">
+                <div class="Bağlantı">
+                    <h5>Site Bağlantıları</h5>
+                    <li><a href="#">Ana Sayfa</a></li>
+                    <ul>
+                        <li><a href="#">İletişim</a></li>
+                        <li><a href="#">Randevu</a></li>
+                        <li><a href="#">Kayıt Ol</a></li>
+                        <li><a href="#">Giriş Yap</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Hizmetler</a></li>
+                        <li><a href="#">Galeri</a></li>
+                        <li><a href="#">Yorumlar</a></li>
+                        <li><a href="#">Hakkımızda</a></li>
+                    </ul>
+                </div>
+                <div class="Yasal">
+                    <h5>Yasal Bilgilendirme</h5>
+                    <ul>
+                        <li><a href="#">Gizlilik ve Güvenlik</a></li>
+                        <li><a href="#">Kişisel Verilerin Korunması</a></li>
+                        <li><a href="#">Kullanım Şartları</a></li>
+                    </ul>
+                </div>
+                <div class="İletisim">
+                    <h5>İletişim Bilgileri</h5>
+                    <ul>
+                        <li><b><i class="fa fa-map-marker"></i> Adres</b></li>
+                        <li>Alipaşa Mahallesi Atatürk Bulvarı<br /> Merkez / Kütahya</li>
+                        <li><b><i class="fa fa-phone"></i> Telefon</b></li>
+                        <li>(274) 12 23</li>
+                        <li><b><i class="fa fa-envelope"></i> E-Posta</b></li>
+                        <li>info@dumlupınar.com</li>
+                        <li><b>Sosyal Medya</b></li>
+                        <li id="sosyal">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="AltFooter">
+                <h6>Copyright 2020 - Dumlupınar Kuaför Tüm Hakları Saklıdır.</h6>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("HeaderID");
+            if (x.className === "Header") {
+                x.className += " responsive";
+            } else {
+                x.className = "Header";
+            }
+        }
+    </script>
+</body>
+</html>

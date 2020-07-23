@@ -1,0 +1,124 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Ana Sayfa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/CSS/Header.css" rel="stylesheet" />
+    <link href="~/CSS/Main.css" rel="stylesheet" />
+    <link href="~/CSS/Footer.css" rel="stylesheet" />
+    <link href="~/CSS/MüşteriGiriş.css" rel="stylesheet" />
+    <link href="~/CSS/DENEME1.css" rel="stylesheet" />
+    <style>
+        .btn-success{
+            width: 350px;
+            border-radius: 25px;
+            height: 50px;
+            border-color: transparent;
+            padding-top: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="Ana">
+        <div class="Logo">
+            <h2 style="text-align:center">DUMLUPINAR KUAFÖR SALONU</h2>
+        </div>
+        <div class="Header" id="HeaderID">
+            <a href="/AnaSayfa/AnaSayfa" ><i class="fa fa-home"></i></a>
+            <a href="/Hizmetler/Hizmetler"><i class="fa fa-male"></i><i class="fa fa-female"></i>	Hizmetler</a>
+            <a href="/Galeri/Galeri"><i class="fa fa-image"></i>	Galeri</a>
+            <a href="/Yorumlar/Yorumlar"><i class="fa fa-comment"></i>	Yorumlar</a>
+            <a href="/Hakkımızda/Hakkimizda"><i class="fa fa-info-circle"></i>	Hakkımızda</a>
+            <a href="/İletişim/İletişim"><i class="fa fa-envelope"></i>	İletişim</a>
+            <a href="/Randevu/RandevuEkle"><i class="fa fa-bell"></i>	Randevu</a>
+            <a href="/GirişSayfa/OrtakGiriş" id="Sag"class="active"><i class="fa fa-sign-in"></i>	Giriş Yap</a>
+            <a id="Sag" href="/KayitSayfa/Kayit"><i class="fa fa-user"></i>	Kayıt Ol</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div class="Content">
+            @using (Html.BeginForm("MüşteriGiriş", "GirişSayfa", FormMethod.Post)) { 
+            <div class="müşteriform">
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <h2>Müşteri Giriş Formu</h2><br /><br />
+                <i class="fa fa-user "></i><input class="input-field" type="text" name="Müşteri_KULLANICI" placeholder="Kullanıcı Adınızı Giriniz." /><br /><br />
+                <i class="fa fa-lock "></i><input class="input-field" type="password" name="Müşteri_ŞİFRE" placeholder="Şifrenizi Giriniz." /><br /><br />
+                <button class="btn btn-info" type="submit">Giriş Yap</button><br /><br />
+                <a class="btn btn-success" id="zaten" href="/KayitSayfa/Kayit"><text style="margin-left:10px;">Üye Değil Misin ?</text></a>
+            </div>}
+        </div>
+
+        <div class="Footer">
+            <div class="ÜstFooter">
+                <div class="Bağlantı">
+                    <h5>Site Bağlantıları</h5>
+                    <li><a style="text-decoration:none;" href="/AnaSayfa/AnaSayfa">Ana Sayfa</astyle="text-decoration:none"></li>
+                    <ul>
+                        <li><a style="text-decoration:none" href="/İletişim/İletişim">İletişim</a></li>
+                        <li><a style="text-decoration:none" href="/Randevu/RandevuEkle">Randevu</a></li>
+                        <li><a style="text-decoration:none" href="/KayitSayfa/Kayit">Kayıt Ol</a></li>
+                        <li><a style="text-decoration:none" href="/GirişSayfa/MüşteriGiriş">Giriş Yap</a></li>
+                    </ul>
+                    <ul>
+                        <li><a style="text-decoration:none" href="/Hizmetler/Hizmetler">Hizmetler</a></li>
+                        <li><a style="text-decoration:none" href="/Galeri/Galeri">Galeri</astyle="text-decoration:none"></li>
+                        <li><a style="text-decoration:none" href="/Yorumlar/Yorumlar">Yorumlar</a></li>
+                        <li><a style="text-decoration:none" href="/Hakkımızda/Hakkımızda">Hakkımızda</a></li>
+                    </ul>
+                </div>
+                <div class="Yasal">
+                    <h5>Yasal Bilgilendirme</h5>
+                    <ul>
+                        <li><a href="#">Gizlilik ve Güvenlik</a></li>
+                        <li><a href="#">Kişisel Verilerin Korunması</a></li>
+                        <li><a href="#">Kullanım Şartları</a></li>
+                    </ul>
+                </div>
+                <div class="İletisim">
+                    <h5>İletişim Bilgileri</h5>
+                    <ul>
+                        <li><b><i class="fa fa-map-marker"></i> Adres</b></li>
+                        <li>Alipaşa Mahallesi Atatürk Bulvarı<br /> Merkez / Kütahya</li>
+                        <li><b><i class="fa fa-phone"></i> Telefon</b></li>
+                        <li>(274) 12 23</li>
+                        <li><b><i class="fa fa-envelope"></i> E-Posta</b></li>
+                        <li>info@dumlupınar.com</li>
+                        <li><b>Sosyal Medya</b></li>
+                        <li id="sosyal">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="AltFooter">
+                <h6>Copyright 2020 - Dumlupınar Kuaför Tüm Hakları Saklıdır.</h6>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("HeaderID");
+            if (x.className === "Header") {
+                x.className += " responsive";
+            } else {
+                x.className = "Header";
+            }
+        }
+    </script>
+</body>
+</html>

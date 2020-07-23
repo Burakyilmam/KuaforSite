@@ -1,0 +1,27 @@
+﻿table {
+    margin-left: 1px;
+    width: 99.99%;
+    text-align: center;
+}
+
+#musteribaslik {
+    background-color: steelblue;
+    height: 50px;
+    color: white;
+}
+
+th {
+    border-right: 2px solid white;
+}
+
+#liste td, th {
+    height: 50px;
+    background-color: rgba(90, 173, 243, 0.50);
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+#liste .btn {
+    width: 85px;
+    color: white;
+}
