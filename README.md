@@ -1,2 +1,2 @@
 # KuaforSite
-Responsive , MVC mimarisini kullanan , randevu sistemi bulunan kuaför sitesi
+Responsive , MVC mimarisini kullanan , Randevu sistemi bulunan kuaför sitesi
