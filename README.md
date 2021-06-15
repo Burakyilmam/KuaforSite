@@ -1,2 +1,2 @@
 # KuaforSite
-MVC Web Proje
+Responsive , MVC mimarisini kullanan , randevu sistemi bulunan kuaför sitesi
